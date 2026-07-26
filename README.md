@@ -1,50 +1,109 @@
-# Welcome to your Expo app 👋
+# Aspect Move (AM) 🏠✨
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> **Aspect Move (AM)** is a high-performance, ultra-sleek, monochrome React Native mobile application for modern real estate discovery, property rentals, and luxury home listings.
 
-## Get started
+![Aspect Move Banner](assets/images/app_logo_1785056480414.png)
 
-1. Install dependencies
+---
 
+## 🌟 Key Features
+
+- 🖤 **Professional Black & White Design**: Pitch black background (`#000000`), sleek zinc card surfaces (`#18181B`), crisp typography, and smooth page transitions.
+- 📱 **Floating Inset Navigation Bar**: Modern, pill-style floating bottom tab navigation with active icon feedback.
+- 🔑 **Authentication Flow**: Clean Sign In & Sign Up user flows with First & Last Name row layouts, input validations, and inline error feedback.
+- 📩 **6-Digit OTP Email Verification**: Built-in 6-digit auto-focusing verification boxes with paste support, backspace navigation, and countdown resend timer.
+- ⚡ **Pure JavaScript Codebase**: Simple, beginner-friendly `.jsx` components without complex TypeScript interfaces.
+- 🚀 **Expo Router v6 File-Based Routing**: Clean, modular route structure utilizing Expo SDK 54.
+
+---
+
+## 📸 Screen Overview
+
+| Screen | Description |
+| :--- | :--- |
+| **Home (`/`)** | Minimalist dashboard introducing latest featured properties and listings. |
+| **Search (`/search`)** | Location and property filter search interface. |
+| **Saved (`/saved`)** | Bookmarked homes and saved user properties. |
+| **Profile (`/profile`)** | User avatar, account details, and session management (Sign In / Sign Out). |
+| **Sign In / Sign Up (`/(auth)`)** | Ultra-sleek dark theme authentication screens with 6-digit OTP verification. |
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [React Native](https://reactnative.dev/) (Expo SDK 54)
+- **Routing**: [Expo Router v6](https://docs.expo.dev/router/introduction/)
+- **Icons**: [@expo/vector-icons (Ionicons)](https://icons.expo.fyi/)
+- **Styling**: Vanilla React Native `StyleSheet` & HSL dark tokens
+- **Authentication**: Custom lightweight `AuthContext` + Clerk REST API integration
+
+---
+
+## 📁 Project Structure
+
+```text
+reactApp/
+├── app/
+│   ├── (auth)/
+│   │   ├── _layout.jsx
+│   │   ├── sign_in.jsx
+│   │   └── sign_up.jsx
+│   ├── (root)/
+│   │   └── (tabs)/
+│   │       ├── _layout.jsx
+│   │       ├── index.jsx
+│   │       ├── search.jsx
+│   │       ├── saved.jsx
+│   │       └── profile.jsx
+│   └── _layout.jsx
+├── assets/
+│   └── images/
+│       └── app_logo_1785056480414.png
+├── context/
+│   └── AuthContext.jsx
+├── .env
+├── package.json
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- Expo Go App on your mobile device (iOS/Android) or an Emulator
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/PremBorde/Aspect_Move.git
+   cd Aspect_Move
+   ```
+
+2. **Install dependencies**:
    ```bash
    npm install
    ```
 
-2. Start the app
+3. **Configure Environment Variables**:
+   Create a `.env` file in the root directory and add your Clerk publishable key:
+   ```env
+   EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
+   ```
 
+4. **Start the Expo Development Server**:
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+5. **Run on Device**:
+   - Scan the generated QR code using **Expo Go** on Android or Camera app on iOS.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📄 License
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Distributed under the MIT License. See `LICENSE` for details.
