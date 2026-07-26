@@ -6,7 +6,7 @@ export default function RootGroupLayout() {
       screenOptions={{ 
         headerShown: false,
         animation: "fade",
-        contentStyle: { backgroundColor: "#000000" },
+        contentStyle: { backgroundColor: "#F8FAFC" },
       }}
     >
       <Stack.Screen name="(tabs)" />

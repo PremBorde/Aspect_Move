@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState } from "react";
 import { 
   StyleSheet, 
@@ -94,7 +95,7 @@ export default function SignInScreen() {
                 keyboardType="email-address"
                 value={email}
                 placeholder="john.doe@example.com"
-                placeholderTextColor="#71717A"
+                placeholderTextColor="#94A3B8"
                 onChangeText={(text) => {
                   setEmail(text);
                   if (errors.email) setErrors({ ...errors, email: undefined });
@@ -110,7 +111,7 @@ export default function SignInScreen() {
               <TextInput
                 value={password}
                 placeholder="Enter your password"
-                placeholderTextColor="#71717A"
+                placeholderTextColor="#94A3B8"
                 secureTextEntry
                 onChangeText={(text) => {
                   setPassword(text);
@@ -129,7 +130,7 @@ export default function SignInScreen() {
               activeOpacity={0.8}
             >
               {loading ? (
-                <ActivityIndicator color="#000000" />
+                <ActivityIndicator color="#FFFFFF" />
               ) : (
                 <Text style={styles.buttonText}>Sign In</Text>
               )}
@@ -155,7 +156,7 @@ export default function SignInScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "#000000",
+    backgroundColor: "#F8FAFC",
   },
   container: {
     flex: 1,
@@ -174,33 +175,33 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
   },
   logoImage: {
-    width: 140,
-    height: 140,
+    width: 120,
+    height: 120,
   },
   title: {
     fontSize: 26,
     fontWeight: "bold",
-    color: "#FFFFFF",
+    color: "#0F172A",
     marginBottom: 6,
     textAlign: "center",
   },
   subtitle: {
     fontSize: 14,
-    color: "#A1A1AA",
+    color: "#64748B",
     textAlign: "center",
     marginBottom: 32,
   },
   errorBanner: {
-    backgroundColor: "rgba(239, 68, 68, 0.15)",
+    backgroundColor: "rgba(239, 68, 68, 0.1)",
     borderWidth: 1,
-    borderColor: "rgba(239, 68, 68, 0.4)",
+    borderColor: "rgba(239, 68, 68, 0.3)",
     borderRadius: 12,
     padding: 12,
     marginBottom: 16,
     width: "100%",
   },
   errorBannerText: {
-    color: "#F87171",
+    color: "#EF4444",
     fontSize: 13,
     textAlign: "center",
   },
@@ -215,31 +216,31 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 12,
     fontWeight: "600",
-    color: "#A1A1AA",
+    color: "#64748B",
     marginBottom: 8,
   },
   input: {
     width: "100%",
-    backgroundColor: "#18181B",
+    backgroundColor: "#FFFFFF",
     borderRadius: 14,
     paddingHorizontal: 16,
     paddingVertical: 14,
-    color: "#FFFFFF",
+    color: "#0F172A",
     fontSize: 15,
     borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.12)",
+    borderColor: "#E2E8F0",
   },
   inputError: {
     borderColor: "#EF4444",
   },
   errorText: {
-    color: "#F87171",
+    color: "#EF4444",
     fontSize: 11,
     marginTop: 4,
   },
   button: {
     width: "100%",
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "#2563EB",
     borderRadius: 14,
     paddingVertical: 15,
     alignItems: "center",
@@ -247,7 +248,7 @@ const styles = StyleSheet.create({
     marginBottom: 18,
   },
   buttonText: {
-    color: "#000000",
+    color: "#FFFFFF",
     fontSize: 16,
     fontWeight: "bold",
   },
@@ -256,11 +257,11 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
   },
   linkText: {
-    color: "#A1A1AA",
+    color: "#64748B",
     fontSize: 14,
   },
   linkHighlight: {
-    color: "#FFFFFF",
+    color: "#2563EB",
     fontWeight: "bold",
   },
 });

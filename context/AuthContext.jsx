@@ -1,4 +1,6 @@
+// @ts-nocheck
 import React, { createContext, useContext, useState } from "react";
+import { syncUserToSupabase } from "../hooks/useSupabase";
 
 const AuthContext = createContext(null);
 
@@ -8,12 +10,14 @@ export function AuthProvider({ children }) {
   const [pendingUser, setPendingUser] = useState(null);
 
   const signIn = async (email, pass) => {
-    setUser({
+    const newUser = {
       firstName: email.split("@")[0] || "User",
       lastName: "",
       emailAddress: email,
-    });
+    };
+    setUser(newUser);
     setIsSignedIn(true);
+    syncUserToSupabase(newUser);
     return true;
   };
 
@@ -27,17 +31,16 @@ export function AuthProvider({ children }) {
   };
 
   const verifyOtp = async (code) => {
-    if (pendingUser) {
-      setUser(pendingUser);
-      setPendingUser(null);
-    } else {
-      setUser({
-        firstName: "User",
-        lastName: "",
-        emailAddress: "user@example.com",
-      });
-    }
+    const newUser = pendingUser || {
+      firstName: "User",
+      lastName: "",
+      emailAddress: "user@example.com",
+    };
+
+    setUser(newUser);
+    setPendingUser(null);
     setIsSignedIn(true);
+    syncUserToSupabase(newUser);
     return true;
   };
 

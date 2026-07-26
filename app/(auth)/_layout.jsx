@@ -7,7 +7,7 @@ export default function AuthRoutesLayout() {
       screenOptions={{ 
         headerShown: false,
         animation: "fade",
-        contentStyle: { backgroundColor: "#000000" },
+        contentStyle: { backgroundColor: "#F8FAFC" },
       }} 
     />
   );

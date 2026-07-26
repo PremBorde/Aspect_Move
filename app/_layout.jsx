@@ -5,13 +5,13 @@ import { AuthProvider } from "../context/AuthContext";
 
 export default function RootLayout() {
   return (
-    <SafeAreaProvider style={{ backgroundColor: "#000000" }}>
+    <SafeAreaProvider style={{ backgroundColor: "#F8FAFC" }}>
       <AuthProvider>
         <Stack 
           screenOptions={{ 
             headerShown: false,
             animation: "fade",
-            contentStyle: { backgroundColor: "#000000" },
+            contentStyle: { backgroundColor: "#F8FAFC" },
           }}
         >
           <Stack.Screen name="index" />
