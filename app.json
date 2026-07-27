@@ -7,7 +7,7 @@
     "icon": "./assets/images/app_logo_1785056480414.png",
     "scheme": "reactapp",
     "userInterfaceStyle": "light",
-    "newArchEnabled": false,
+    "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.prem9880.reactApp"
